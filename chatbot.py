@@ -9,7 +9,7 @@ client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # ====== 질문 리스트 ======
 questions = [
-    "좋아하는 사람이 생기면 어떻게 행동해? \n(먼저 다가가는 편? 끝까지 조용히 있는 편?)",
+    "좋아하는 사람이 생기면 어떻게 행동해?",
     "연락은 어떻게 하는 스타일이야?",
     "연애할 때 표현은 어떤 편이야?",
     "다툴 때 어떤 스타일?",
@@ -22,7 +22,7 @@ if "step" not in st.session_state:
     st.session_state.answers = []
 
 st.title("💘 나의 연애 스타일은?")
-st.markdown("AI가 분석해주는 나의 연애 스타일을 알아보자!(나랑 잘 맞는 스타일 추천은 덤...)")
+st.markdown("AI가 분석해주는 나의 연애 스타일을 알아보자!(나랑 잘 맞는 스타일 추천은 덤...!)")
 
 # ====== 설문 진행 ======
 if st.session_state.step < len(questions):
